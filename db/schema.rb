@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_06_29_130244) do
     t.index ["room_id"], name: "index_messages_on_room_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
+
 ActiveRecord::Schema.define(version: 2021_06_29_084933) do
 
   create_table "room_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
