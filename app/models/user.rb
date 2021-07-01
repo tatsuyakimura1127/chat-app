@@ -3,11 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  
+
   has_many :room_users
   has_many :rooms, through: :room_users
-  has_many :messages      
-
+  has_many :messages
 
   validates :name, presence: true
   has_many :room_users
@@ -16,3 +15,4 @@ class User < ApplicationRecord
   has_many :room_users
   has_many :rooms, through: :room_users
 end
+
